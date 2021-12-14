@@ -1,0 +1,22 @@
+<div class="login-wrapper">
+  <form class="login">
+    <section class="title">
+      <h3 class="welcome">Welcome to</h3>
+      FOOD DIARY
+    </section>
+    <div class="login-group">
+        <clr-input-container>
+          <input placeholder="Username" clrInput [ngModel]="username" name="username" [pattern]="userNamePattern" (blur)="onUsernameBlur($event)"/>
+          <clr-control-error *clrIfError="'pattern'">{{usernameMessage}}</clr-control-error>
+        </clr-input-container>
+
+        <clr-password-container>
+          <input placeholder="Password" clrPassword [ngModel]="password" name="password" required [pattern]="passwordPattern" (blur)="onPasswordBlur($event)"/>
+          <clr-control-error *clrIfError="'pattern'">{{passwordMessage}}</clr-control-error>
+        </clr-password-container>
+
+      <button type="submit" class="btn btn-success-outline" (click)="loginButton()" id="loginButton">LOGIN</button>
+      <button type="submit" class="btn btn-outline" (click)="goBack()" id="backButton">Back</button>
+    </div>
+  </form>
+</div>

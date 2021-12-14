@@ -1,0 +1,43 @@
+<div class="login-wrapper">
+  <form class="login">
+    <section class="title">
+      <h3 class="welcome">Welcome to</h3>
+      FOOD DIARY
+    </section>
+    <div class="login-group">
+      <clr-input-container>
+        <input placeholder="Username" clrInput [ngModel]="username" name="username" [pattern]="userNamePattern" (blur)="onUsernameBlur($event)"/>
+        <clr-control-error *clrIfError="'pattern'">{{usernameMessage}}</clr-control-error>
+      </clr-input-container>
+
+      <clr-password-container>
+        <input placeholder="Password" clrPassword [ngModel]="password" name="password" [pattern]="passwordPattern" (blur)="onPasswordBlur($event)"/>
+        <clr-control-error *clrIfError="'pattern'">{{passwordMessage}}</clr-control-error>
+      </clr-password-container>
+
+      <clr-input-container>
+        <input placeholder="Firstname" clrInput [ngModel]="firstName" name="firstname" [pattern]="firstNamePattern" (blur)="onFirstnameBlur($event)"/>
+        <clr-control-error *clrIfError="'pattern'">{{firstnameMessage}}</clr-control-error>
+      </clr-input-container>
+
+      <clr-input-container>
+        <input placeholder="Lastname" clrInput="" nput="" [ngModel]="lastName" name="lastname" [pattern]="lastNamePattern" (blur)="onLastnameBlur($event)"/>
+        <clr-control-error *clrIfError="'pattern'">{{lastnameMessage}}</clr-control-error>
+      </clr-input-container>
+
+      <clr-input-container>
+        <input placeholder="Email" clrInput [ngModel]="email" name="email" [pattern]="emailPattern" (blur)="onEmailBlur($event)"/>
+        <clr-control-error *clrIfError="'pattern'">{{emailMessage}}</clr-control-error>
+      </clr-input-container>
+
+      <clr-input-container>
+        <input placeholder="Age" clrInput [ngModel]="age" name="age" [pattern]="agePattern"(blur)="onAgeBlur($event)"/>
+        <clr-control-error *clrIfError="'pattern'">{{ageMessage}}</clr-control-error>
+      </clr-input-container>
+
+      <button type="submit" class="btn btn-success-outline" (click)="registerButton()" id="registerButton">Register</button>
+      <button type="submit" class="btn btn-outline" (click)="goBack()" id="backButton">Back</button>
+    </div>
+  </form>
+</div>
+

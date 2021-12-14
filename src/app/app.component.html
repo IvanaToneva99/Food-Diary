@@ -1,0 +1,18 @@
+<header class="header-6">
+  <div class="branding">
+    <a href="/" class="nav-link">
+      <span class="title">Food Diary</span>
+    </a>
+  </div>
+
+  <div *ngIf="!isUserLoggedIn()" class="header-actions">
+    <a href="/login" class="active nav-link nav-text">SIGN IN</a>
+    <a href="/register" class="nav-link nav-text">SIGN UP</a>
+  </div>
+
+  <div *ngIf="isUserLoggedIn()" class="header-actions">
+    <a class="active nav-link nav-text" >{{'Hello, ' + getUsername()}}</a>
+    <a class="nav-link nav-text" (click)="logOut()">LOGOUT</a>
+  </div>
+</header>
+<router-outlet></router-outlet>

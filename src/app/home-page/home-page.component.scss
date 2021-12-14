@@ -1,0 +1,33 @@
+h1{
+  margin: 0;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 3.5rem;
+}
+*{
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h2{
+  text-align: center;
+}
+img{
+  height: 400px;
+  width: 90%;
+}
+
+
+
+
